@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectoinstituto.LoginController">
+   <children>
+      <Label layoutX="185.0" layoutY="33.0" text="Bienvenido">
+         <font>
+            <Font name="Times New Roman Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="136.0" prefHeight="32.0" prefWidth="81.0" text="Email:">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font></Label>
+      <TextField fx:id="email" layoutX="218.0" layoutY="139.0" prefHeight="25.0" prefWidth="172.0" />
+      <TextField fx:id="password" layoutX="219.0" layoutY="188.0" prefHeight="25.0" prefWidth="172.0" />
+      <Label layoutX="95.0" layoutY="186.0" text="Contraseña:">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font></Label>
+      <ChoiceBox fx:id="picker" layoutX="225.0" layoutY="231.0" prefWidth="150.0" />
+      <Button fx:id="login" layoutX="229.0" layoutY="300.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="59.0" prefWidth="150.0" style="-fx-background-radius: 5;" text="INICIAR SESION" />
+      <Button fx:id="registrarse" layoutX="436.0" layoutY="345.0" mnemonicParsing="false" onAction="#registrarse" prefHeight="41.0" prefWidth="150.0" style="-fx-background-radius: 5;" text="SOLICITAR REGISTRO" />
+   </children>
+</AnchorPane>

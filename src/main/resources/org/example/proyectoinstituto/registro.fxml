@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectoinstituto.RegistroController">
+   <children>
+      <Label alignment="CENTER" layoutX="55.0" layoutY="21.0" prefHeight="86.0" prefWidth="490.0" text="Solicitar Usuario al Instituto:">
+         <font>
+            <Font name="Times New Roman" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="122.0" text="NOMBRE:">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></Label>
+      <TextField fx:id="nombreField" layoutX="243.0" layoutY="118.0" />
+      <TextField fx:id="apellidosField" layoutX="243.0" layoutY="174.0" />
+      <Label layoutX="174.0" layoutY="179.0" text="APELLIDOS:">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="223.0" layoutY="238.0" onAction="#abrirVentanaAsignaturas" prefHeight="25.0" prefWidth="159.0" style="-fx-background-radius: 15;" text="Seleccionar Asignaturas" />
+      <Button layoutX="223.0" layoutY="300.0" mnemonicParsing="false" onAction="#solicitarRegistro" prefHeight="48.0" prefWidth="159.0" style="-fx-background-radius: 5;" text="Solicitar" />
+      <ImageView fx:id="volver" fitHeight="37.0" fitWidth="44.0" layoutX="14.0" layoutY="21.0" onMouseClicked="#volver" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../arrow.png" />
+      </image>
+      </ImageView>
+
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectoinstituto.AsignaturasController">
+    <children>
+        <VBox layoutX="50.0" layoutY="50.0" spacing="10.0">
+            <children>
+                <Label text="Selecciona tus asignaturas:">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></Label>
+                <CheckBox fx:id="asignatura1" text="Acceso a Datos" />
+                <CheckBox fx:id="asignatura2" text="Desarrollo de interfaces" />
+                <CheckBox fx:id="asignatura3" text="Programación multimedia y dispositivos móviles" />
+                <CheckBox fx:id="asignatura4" text="Programación de servicios y procesos" />
+                <CheckBox fx:id="asignatura5" text="Sistemas de gestión empresarial" />
+                <CheckBox fx:id="asignatura6" text="Empresa e iniciativa emprendedora" />
+                <Button onAction="#confirmarAsignaturas" prefHeight="44.0" prefWidth="110.0" text="Confirmar" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

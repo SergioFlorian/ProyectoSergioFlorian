@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="361.0" prefWidth="478.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="org.example.proyectoinstituto.CalificacionFinalTrabajos">
+    <children>
+        <TableView fx:id="tableViewTrabajos" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="460.0">
+            <columns>
+                <TableColumn fx:id="colTrabajo" prefWidth="250.0" text="Trabajo" />
+                <TableColumn fx:id="colCalificacion" prefWidth="100.0" text="Calificación" />
+            </columns>
+        </TableView>
+        <Label layoutX="24.0" layoutY="330.0" prefHeight="19.0" prefWidth="45.0" text="Media: ">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+        <TextField fx:id="mediaField" editable="false" layoutX="69.0" layoutY="327.0" prefWidth="80.0" />
+        <Button fx:id="btnCalcularMedia" layoutX="200.0" layoutY="325.0" text="Calcular Media" />
+        <Button fx:id="btnConfirmarCalificacion" layoutX="300.0" layoutY="325.0" text="Confirmar Calificación" />
+    </children>
+</AnchorPane>

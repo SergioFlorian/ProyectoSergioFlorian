@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proyectoinstituto.InicioAlumno">
+   <children>
+      <BorderPane layoutX="298.0" layoutY="149.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <AnchorPane prefHeight="733.0" prefWidth="143.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="-65.0" layoutY="68.0" prefHeight="600.0" prefWidth="135.0" style="-fx-background-color: linear-gradient(#272b3f, #256b51);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                         <ImageView fitHeight="63.0" fitWidth="61.0" layoutX="44.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                             <image>
+                                 <Image url="@../../../user.png" />
+                             </image>
+                         </ImageView>
+                         <Label layoutX="53.0" layoutY="127.0" text="Alumno" textFill="WHITE">
+                             <font>
+                                 <Font name="Droid Sans" size="12.0" />
+                             </font>
+                         </Label>
+                         <Label fx:id="nombre" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="152.0" prefHeight="34.0" prefWidth="75.0" textFill="WHITE" />
+                         <Button fx:id="perfilButton" layoutX="13.0" layoutY="538.0" mnemonicParsing="false" onMouseClicked="#mostrarPerfil" prefHeight="45.0" prefWidth="122.0" style="-fx-background-radius: 5;" text="Perfil" />
+                         <Button fx:id="inicioButton" layoutX="14.0" layoutY="242.0" mnemonicParsing="false" onMouseClicked="#mostrarInicio" prefHeight="45.0" prefWidth="122.0" style="-fx-background-radius: 5;" text="Inicio" />
+                         <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="25.0" layoutY="697.0" onMouseClicked="#cerrarSesion" pickOnBounds="true" preserveRatio="true">
+                             <image>
+                                 <Image url="@../../../logout.png" />
+                             </image>
+                         </ImageView>
+                         <Label layoutX="53.0" layoutY="703.0" text="Cerrar Sesión" textFill="#f2f2f2">
+                             <font>
+                                 <Font name="Times New Roman" size="12.0" />
+                             </font>
+                         </Label>
+                         <Button fx:id="trabajosButton" layoutX="14.0" layoutY="315.0" mnemonicParsing="false" onMouseClicked="#mostrarAsignaturas" prefHeight="45.0" prefWidth="122.0" style="-fx-background-radius: 5;" text="Asignaturas" />
+                         <Button layoutX="13.0" layoutY="463.0" mnemonicParsing="false" onMouseClicked="#mostrarCorreo" prefHeight="45.0" prefWidth="122.0" style="-fx-background-radius: 5;" text="Correo" />
+                        <Button layoutX="14.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#mostrarTrabajos" prefHeight="45.0" prefWidth="122.0" style="-fx-background-radius: 5;" text="Trabajos" />
+                     </children></AnchorPane>
+               </children></AnchorPane>
+         </left>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="inicioAlumnoPane" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="420.0" layoutY="22.0" text="CALENDARIO">
+                           <font>
+                              <Font name="Droid Sans" size="24.0" />
+                           </font></Label>
+                         <ImageView fitHeight="676.0" fitWidth="1155.0" layoutX="13.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                             <image>
+                                 <Image url="@../../../calendario.png" />
+                             </image>
+                         </ImageView>
+                     </children></AnchorPane>
+                   <AnchorPane fx:id="asignaturasAlumnoPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                       <children>
+                           <Label layoutX="264.0" layoutY="71.0" text="TUS ASIGNATURAS">
+                           <font>
+                              <Font name="Times New Roman" size="48.0" />
+                           </font></Label>
+                           <TableView fx:id="tablaAsignaturas" layoutX="4.0" layoutY="220.0" prefHeight="293.0" prefWidth="963.0">
+                               <columns>
+                                   <TableColumn fx:id="colNombreAsignatura" prefWidth="200.0" text="Nombre Asignatura" />
+                                   <TableColumn fx:id="colDescripcion" prefWidth="300.0" text="Descripción" />
+                                   <TableColumn fx:id="colProfesor" prefWidth="200.0" text="Profesor" />
+                                   <TableColumn fx:id="colCalificacion" prefWidth="153.0" text="Calificación" />
+                                   <TableColumn fx:id="colFaltas" prefWidth="147.0" text="Faltas" />
+                               </columns>
+                           </TableView>
+                       </children>
+                   </AnchorPane>
+                   <AnchorPane fx:id="trabajosAlumnoPane" prefHeight="600.0" prefWidth="1100.0" visible="false">
+                       <children>
+                           <Label layoutX="364.0" layoutY="42.0" text="TRABAJOS">
+                               <font>
+                                   <Font name="Times New Roman" size="48.0" />
+                               </font>
+                           </Label>
+                           <ComboBox fx:id="comboAsignaturas" layoutX="35.0" layoutY="117.0" onAction="#cambiarAsignatura" prefWidth="200.0" />
+                           <TableView fx:id="tablaTrabajos" layoutX="35.0" layoutY="167.0" prefHeight="400.0" prefWidth="900.0">
+                               <columns>
+                                   <TableColumn fx:id="colTituloTrabajo" prefWidth="200.0" text="Título" />
+                                   <TableColumn fx:id="colDescripcionTrabajo" prefWidth="400.0" text="Descripción" />
+                                   <TableColumn fx:id="colFechaEntrega" prefWidth="150.0" text="Fecha de Entrega" />
+                                   <TableColumn fx:id="colCalificacionTrabajo" prefWidth="150.0" text="Calificación" />
+                               </columns>
+                           </TableView>
+                       </children>
+                   </AnchorPane>
+                   <AnchorPane fx:id="correoAlumnoPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                       <children>
+                           <Label layoutX="371.0" layoutY="66.0" text="CORREO">
+                               <font>
+                                   <Font name="Times New Roman" size="48.0" />
+                               </font>
+                           </Label>
+                           <Label layoutX="97.0" layoutY="180.0" text="Profesor:">
+                               <font>
+                                   <Font name="Times New Roman Bold" size="16.0" />
+                               </font>
+                           </Label>
+                           <ComboBox fx:id="comboCorreosProfesores" layoutX="175.0" layoutY="180.0" prefWidth="400.0" />
+                           <Label layoutX="97.0" layoutY="230.0" text="Mensaje:">
+                               <font>
+                                   <Font name="Times New Roman Bold" size="16.0" />
+                               </font>
+                           </Label>
+                           <TextArea fx:id="mensajeTextArea" layoutX="175.0" layoutY="230.0" prefHeight="274.0" prefWidth="645.0" />
+                           <Button fx:id="enviarCorreoButton" layoutX="383.0" layoutY="566.0" mnemonicParsing="false" onAction="#enviarCorreo" prefHeight="75.0" prefWidth="205.0" style="-fx-background-radius: 5;" text="ENVIAR CORREO" />
+                       </children>
+                   </AnchorPane>
+
+                   <AnchorPane fx:id="perfilAlumnoPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                       <children>
+                           <Label alignment="CENTER" layoutX="352.0" layoutY="140.0" text="PERFIL ALUMNO">
+                               <font>
+                                   <Font size="36.0" />
+                               </font></Label>
+                           <Label layoutX="183.0" layoutY="275.0" text="NOMBRE:">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font></Label>
+                           <TextField fx:id="fieldNombreProfe" disable="true" layoutX="376.0" layoutY="269.0" prefHeight="40.0" prefWidth="272.0" />
+                           <Label layoutX="183.0" layoutY="330.0" text="APELLIDOS:">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font></Label>
+                           <Label layoutX="183.0" layoutY="384.0" text="EMAIL:">
+                           <font>
+                              <Font name="Times New Roman" size="24.0" />
+                           </font></Label>
+                           <Label layoutX="183.0" layoutY="439.0" text="CONTRASEÑA:">
+                           <font>
+                              <Font size="24.0" />
+                           </font></Label>
+                           <TextField fx:id="fieldApellidosProfe" disable="true" layoutX="376.0" layoutY="324.0" prefHeight="40.0" prefWidth="272.0" />
+                           <TextField fx:id="fieldEmailProfe" disable="true" layoutX="377.0" layoutY="378.0" prefHeight="40.0" prefWidth="272.0" />
+                           <TextField fx:id="fieldPasswordProfe" disable="true" layoutX="377.0" layoutY="434.0" prefHeight="40.0" prefWidth="272.0" />
+                           <Button fx:id="editarDatosBtn" layoutX="716.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#editarDatosPerfil" prefHeight="51.0" prefWidth="178.0" styleClass="5" text="EDITAR DATOS" />
+                           <Button fx:id="aceptarCambiosBtn" layoutX="396.0" layoutY="563.0" mnemonicParsing="false" onMouseClicked="#aceptarCambios" prefHeight="51.0" prefWidth="178.0" style="-fx-background-radius: 5;" text="ACEPTAR CAMBIOS" />
+                       </children></AnchorPane>
+               </children>
+            </StackPane>
+         </center></BorderPane>
+   </children>
+</AnchorPane>
